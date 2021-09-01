@@ -42,7 +42,8 @@ server:
 # PMJ Start - jym
 api:
   url:
-    payment: http://localhost:8084
+    paymnet: ${configurl}
+    #payment: http://localhost:8084
 
 feign:
   hystrix:
