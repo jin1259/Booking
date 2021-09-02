@@ -47,8 +47,9 @@ phases:
             labels:
               app: $_PROJECT_NAME
           spec:
+            type: LoadBalancer
             ports:
-              - port: 8080
+              - port: 80
                 targetPort: 8080
             selector:
               app: $_PROJECT_NAME
@@ -76,12 +77,12 @@ phases:
                     image: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$_PROJECT_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
                     ports:
                       - containerPort: 8080
-                    env:
-                      - name: apiurl #port-list     #configmap
-                        valueFrom:          #configmap
-                          configMapKeyRef:  #configmap
-                            name: apiurl #port-list #configmap
-                            key: url  #port2      #configmap
+               #     env:
+               #       - name: apiurl #port-list     #configmap
+               #         valueFrom:          #configmap
+               #           configMapKeyRef:  #configmap
+               #             name: apiurl #port-list #configmap
+               #             key: url  #port2      #configmap
                #     args:           #liveness
                #       - /bin/sh     #liveness
                #       - -c          #liveness
