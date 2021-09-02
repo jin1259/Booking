@@ -39,7 +39,7 @@ logging:
 server:
   port: 8081
 
-# PMJ Start - jym
+# PMJ Start
 api:
   url:
     paymnet: ${configurl}
