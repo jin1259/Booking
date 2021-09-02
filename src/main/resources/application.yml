@@ -42,7 +42,8 @@ server:
 # PMJ Start
 api:
   url:
-    paymnet: ${configurl}
+    paymnet: http://payment:8080
+    #paymnet: ${configurl}
     #payment: http://localhost:8084
 
 feign:
