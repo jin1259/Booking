@@ -47,9 +47,8 @@ phases:
             labels:
               app: $_PROJECT_NAME
           spec:
-            #type: LoadBalancer
             ports:
-              - port: 80
+              - port: 8080
                 targetPort: 8080
             selector:
               app: $_PROJECT_NAME
@@ -82,7 +81,7 @@ phases:
                #         valueFrom:          #configmap
                #           configMapKeyRef:  #configmap
                #             name: apiurl #port-list #configmap
-               #             key: url  #port2      #configmap
+               #             key: url #port2      #configmap
                #     args:           #liveness
                #       - /bin/sh     #liveness
                #       - -c          #liveness
