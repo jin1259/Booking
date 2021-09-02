@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Date;
 
 
-@FeignClient(name ="payment", url="${api.url.payment}") //, fallback = PaymentServiceImpl.class) //jym - application.yml
+//@FeignClient(name ="payment", url="${api.url.payment}") //, fallback = PaymentServiceImpl.class) //jym - application.yml
 //@FeignClient(name="Payment", url="http://Payment:8080")
+@FeignClient(name="Payment", url="http://localhost:8084")
 public interface PaymentService {
 
     //@RequestMapping(method= RequestMethod.GET, path="/payments")
