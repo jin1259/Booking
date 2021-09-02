@@ -99,17 +99,16 @@ public class Booking {
     }
 
     //1. pub/sub START
-    /*
-    @PostPersist
+     @PostPersist
     public void onPostPersist(){
         Booked booked = new Booked();
         BeanUtils.copyProperties(this, booked);
         booked.publishAfterCommit();
     }
-    */
     //1. pub/sub end
 
     //2. req/res start
+ /*
     @PostPersist
     public void callPaymentStart(){
             Payment payment = new Payment();
@@ -123,7 +122,7 @@ public class Booking {
             paymentService.startPayment(payment);
     }
     //2. req/res end
-
+*/
     @PreRemove
     public void onPreRemove(){
         // 특정 대상에 대해 삭제 또는 갱신되도록 처리 필요
