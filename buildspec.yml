@@ -77,7 +77,7 @@ phases:
                     ports:
                       - containerPort: 8080
                     env:
-                      - name: port-list     #configmap
+                      - name: apiurl #port-list     #configmap
                         valueFrom:          #configmap
                           configMapKeyRef:  #configmap
                             name: apiurl #port-list #configmap
