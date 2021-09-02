@@ -42,9 +42,8 @@ server:
 # PMJ Start
 api:
   url:
-    paymnet: http://payment:8080
+    paymnet: http://localhost:8084
     #paymnet: ${configurl}
-    #payment: http://localhost:8084
 
 feign:
   hystrix:
@@ -81,3 +80,17 @@ spring:
         event-out:
           destination: bookingexhibition
           contentType: application/json
+
+feign:
+  hystrix:
+    enabled: true
+    
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 610
+      
+# PMJ Start
+api:
+  url:
+    paymnet: http://payment:8080
