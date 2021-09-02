@@ -80,8 +80,8 @@ phases:
                       - name: port-list     #configmap
                         valueFrom:          #configmap
                           configMapKeyRef:  #configmap
-                            name: port-list #configmap
-                            key: port2      #configmap
+                            name: apiurl #port-list #configmap
+                            key: url  #port2      #configmap
                #     args:           #liveness
                #       - /bin/sh     #liveness
                #       - -c          #liveness
